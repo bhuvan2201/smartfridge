@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Fridge</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <script>
+    function validateLogin(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get username and password values
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Example credentials
+      const validUsername = 'admin';
+      const validPassword = 'password123';
+
+      // Check if credentials match
+      if (username === validUsername && password === validPassword) {
+        alert('Login successful!');
+        window.location.href = 'dashboard.html'; // Redirect to the next page
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <header>
+    <h1>Smart Fridge Dashboard</h1>
+  </header>
+  <form onsubmit="validateLogin(event)">
+    <!-- Username Field -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+    <!-- Password Field -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    <!-- Login Button -->
+    <button type="submit">Login</button>
+  </form>
+</body>
+
+  

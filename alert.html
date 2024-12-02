@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Fridge</title>
+  <link rel="stylesheet" href=dash.css>
+</head>
+<body>
+    <header>
+      <h1>Smart Fridge </h1>
+      <img src="cart.png" alt="cart" class="cart.icon">
+    </header>
+    <nav class="navbar">
+        <a href="home.html" class="active">Home</a>
+        <a href="items.html">Items</a>
+        <a href="spoiled.html">Spoiled</a>
+        <a href="expired.html">Expired</a>
+        <a href="alert.html">Alert</a>
+        
+    </nav>
+    
+    <div class="alert" id="doorAlert">
+      <p>Your Fridge door is opened. Click the button below to close the door.</p>
+      <button type="submit" onclick="closeDoor()">Close the door</button>
+    </div>
+
+    <!-- Spoiled and Expired Alerts -->
+    <div class="alert" id="spoiledAlert">
+      <p><strong>Warning</strong>: Tomatoes are spoiled. Remove from the fridge.</p>
+    </div>
+    <div class="alert" id="expiredAlert">
+      <p><strong>Alert</strong>: Carrots are expired. Order new ones.</p>
+    </div>
+    <div class="alert" id="cartAlert">
+      <p><strong>Alert</strong>: Check out the products in the cart.</p>
+    </div>
+
+    <script>
+      function closeDoor() {
+        // Update the fridge door alert message
+        const doorAlert = document.querySelector('#doorAlert');
+        doorAlert.innerHTML = "<p>The fridge door has been closed. Thank you!</p>";
+
+        // Hide all other content
+        const allAlerts = document.querySelectorAll('.alert');
+        allAlerts.forEach(function(alert) {
+          alert.classList.add('hidden');
+        });
+
+        // Optionally, show the updated door alert
+        doorAlert.classList.remove('hidden');
+      }
+    </script>
+    </body>

@@ -1,0 +1,122 @@
+body{
+    background-color:rgb(72, 154, 118)
+}
+
+
+
+
+header{
+    display:flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color:white;
+    color: rgb(52, 49, 49);
+    padding: 20px;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin-left:400px;
+  }
+
+  .cart-icon {
+    margin-left: 100px;
+    width: 10px; 
+    height: 100px; 
+  }
+
+img{
+    height:70px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 10px 0;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    background-color: #d3d7da;
+  }
+
+  .navbar a:after {
+    content: '→';
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+  }
+
+  .navbar a:hover:after {
+    opacity: 1;
+    right: -10px;
+  }
+
+  .navbar .active {
+    background-color: #004080;
+  }
+
+
+.fridge-icon{
+    width: 1550px;
+    height: 520px;
+}
+
+h2{
+    background-color:white;
+   
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.item img {
+  width: 100px; /* Adjust image size */
+  height: auto;
+  margin-right: 15px; /* Space between image and text */
+}
+
+.item p {
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: aliceblue;
+}
+
+
+.alert{
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: space-between;
+  width:fit-content;
+  background-color: white;
+}
+
+button{
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(69, 69, 203);
+  
+}
